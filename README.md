@@ -2,7 +2,7 @@
 
 An AI agent that delivers immersive, multimedia deep dives into the culture of any country.
 
-**Live Demo:** `https://culture-agent-280879789566.me-central1.run.app/`
+**Live Demo:** `https://culture-agent.cycls.ai/`
 
 ---
 
