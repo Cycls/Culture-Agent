@@ -1,5 +1,7 @@
 import cycls, os, dotenv, requests, json, google.generativeai as genai, asyncio
 from openai import OpenAI
+from ui import header, intro
+
 dotenv.load_dotenv(".env")
 agent = cycls.Agent(api_key=os.getenv("CYCLS_API_KEY"), pip=["google-generativeai", "python-dotenv", "openai", "requests", "exa_py"], copy=[".env"])
 
@@ -24,7 +26,7 @@ def get_images(country, qtype="culture"):
         return {"success": True, "images": [{"url": r.url, "desc": (r.title or r.text[:60]) if r.text or r.title else f"{country}"} for r in results.results]} if results.results else {"error": "No images"}
     except: return {"error": "API failed"}
 
-@agent()
+@agent(header=header, intro=intro)
 async def culture_agent(context):
     import dotenv
     dotenv.load_dotenv(".env")
@@ -76,3 +78,4 @@ async def culture_agent(context):
     yield resp.content or "Hello! 🌍 I'm a cultural anthropologist. Which country's culture would you like to explore?"
 
 agent.cycls(prod=True)
+
