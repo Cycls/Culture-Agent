@@ -77,5 +77,5 @@ async def culture_agent(context):
     
     yield resp.content or "Hello! 🌍 I'm a cultural anthropologist. Which country's culture would you like to explore?"
 
-agent.push(prod=True)
+agent.modal(prod=True)
 

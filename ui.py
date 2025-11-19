@@ -1,3 +1,4 @@
+import urllib.parse
 
 header = """
 <raw>
@@ -30,22 +31,21 @@ header = """
 </raw>
 """
 
-intro = """
+intro = f"""
 <div class="py-3">
   <div class="flex flex-wrap gap-3 justify-center">
-    <a href="https://cycls.com/send/${encodeURIComponent('Tell me about Japanese culture')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
+    <a href="https://cycls.com/send/{urllib.parse.quote('Tell me about Japanese culture')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
       <span>Tell me about Japanese culture</span>
     </a>
-    <a href="https://cycls.com/send/${encodeURIComponent('What are some unique traditions in India?')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
+    <a href="https://cycls.com/send/{urllib.parse.quote('What are some unique traditions in India?')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
       <span>What are some unique traditions in India?</span>
     </a>
-    <a href="https://cycls.com/send/${encodeURIComponent('Explore Brazilian culture')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
+    <a href="https://cycls.com/send/{urllib.parse.quote('Explore Brazilian culture')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
       <span>Explore Brazilian culture</span>
     </a>
-    <a href="https://cycls.com/send/${encodeURIComponent('What makes Moroccan culture unique?')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
+    <a href="https://cycls.com/send/{urllib.parse.quote('What makes Moroccan culture unique?')}" class="group relative inline-flex items-center justify-center px-4 py-2 overflow-hidden font-medium text-gray-700 border-2 border-gray-300 rounded-xl shadow-lg bg-gradient-to-br from-gray-50 to-white focus:outline-none hover:border-gray-400 hover:shadow-xl transition-all whitespace-nowrap text-sm">
       <span>What makes Moroccan culture unique?</span>
     </a>
   </div>
 </div>
-
 """
